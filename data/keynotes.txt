@@ -1,0 +1,55 @@
+# scaler  - 45 (a number)
+# vector  - [8, 4, 5, 6] (row | column list or array of numbers)
+# matrix  - [0, 5]
+        #   [8, 8]
+
+# Mean      :- Missing values in a dataset can be replaced with a mean value, if the data is uniformly distributed
+# Median    :- Missing values in a dataset can be replaced with a median value if the data is skewed
+# Mode      :- Missing values in a dataset can be replaced with a mode value if the data is skewed. Missing categorical values can also be replaced 
+            # with mode value 
+
+# To remove a missing field values: dataset.dropna()
+# To replace or change value: dataset.replace(('Field Name: ('value': 0, 'value': 1)), implace=True)
+
+
+# Supervised Learning Models
+- Classification Model :- this model is about predicting class or discrect values e.g. male or female, true or false
+    - Logistic Regression 
+    - Support Vector Machine Classifier
+    - Decision Tree
+    - K-Nearest Neigbours
+    - Random Forest 
+    - Naive Bayes Classifier 
+
+- Regression :- this type of model is about predicting a quantity or continious values e.g. Salary, age, price
+    - Linear Regression 
+    - Lasso Regression 
+    - Polynomial Regression
+    - Support Vector Machine Regressor 
+    - Random Forest Regressor
+    - Bayesian Linear Regressor
+
+
+# Unsupervised Learning Model :- here the machine Learning algorithim learns from unlabelled data
+- Unsupervised Learning Model Types
+    - Clustering 
+        - K-Means Claustering
+        - Hierarchical Claustering
+        - Pricipal Component Analysis (PCA)
+        - Apriori
+        - Eclat
+    - Association 
+
+# How to choose the right model (Model Selection)
+    -: Selecting model depends on factors such as dataset, tasks, nature of model etc
+
+    1. Type of Data Available
+        a. images & videos - CNN (convertion neural network)
+        b. Text data or Speech data - RNN
+        c. Numerical Data - SVM, Logistic Regression, Decision Tree etc.
+
+    2. Based on task we need to carry out 
+        a. Classification task - SVM, Logistic Regression, Decision Tree etc.
+        b. Regression task - Linear Regression, Random Forest, Polynomial Regression etc.
+        c. Clustering task - K-Means Clustering, Hierarchical Clustering  
+
