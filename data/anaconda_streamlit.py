@@ -6,7 +6,11 @@ import os
 import pickle
 
 # Absolute path (so it's consistent no matter where you run Streamlit)
-MODEL_PATH = r"C:\Users\Dev\Desktop\py\data\trained_diabetes_model.sav"
+# MODEL_PATH = r"C:\Users\Dev\Desktop\py\data\trained_diabetes_model.sav"
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "data", "trained_diabetes_model.sav")
+
 
 # 1️⃣ Check if file exists
 if not os.path.exists(MODEL_PATH):
