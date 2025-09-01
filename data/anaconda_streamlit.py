@@ -2,8 +2,34 @@ import numpy as np
 import streamlit as st
 import pickle
 
-# loaded_model = pickle.load(open('trained_diabetes_model.sav', 'rb'))
-loaded_model = pickle.load(open('C:/Users/Dev/Desktop/py/data/trained_diabetes_model.sav', 'rb'))
+import os
+import pickle
+
+# Absolute path (so it's consistent no matter where you run Streamlit)
+MODEL_PATH = r"C:\Users\Dev\Desktop\py\data\trained_diabetes_model.sav"
+
+# 1️⃣ Check if file exists
+if not os.path.exists(MODEL_PATH):
+    raise FileNotFoundError(f"Model file not found at: {MODEL_PATH}")
+
+# 2️⃣ Check if file is readable
+if not os.access(MODEL_PATH, os.R_OK):
+    raise PermissionError(f"Model file is not readable: {MODEL_PATH}")
+
+# 3️⃣ Load the model safely
+with open(MODEL_PATH, "rb") as f:
+    try:
+        loaded_model = pickle.load(f)
+    except Exception as e:
+        raise RuntimeError(f"Failed to load pickle file. Error: {e}")
+
+# Extract model + scaler
+if not isinstance(loaded_model, dict):
+    raise TypeError("Expected a dictionary with 'model' and 'scaler' keys, but got something else.")
+
+if "model" not in loaded_model or "scaler" not in loaded_model:
+    raise KeyError("Pickle file does not contain expected 'model' and 'scaler' keys.")
+
 model = loaded_model["model"]
 scaler = loaded_model["scaler"]
 
