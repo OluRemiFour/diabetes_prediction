@@ -1,9 +1,14 @@
 import numpy as np
 import streamlit as st
 import pickle
+import os
 
-loaded_model = pickle.load(open('data/trained_diabetes_model.sav', 'rb'))
-# loaded_model = pickle.load(open('C:/Users/Dev/Desktop/py/data/trained_diabetes_model.sav', 'rb'))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(BASE_DIR, "trained_diabetes_model.sav")  # ✅ fixed
+
+with open(model_path, "rb") as f:
+    loaded_model = pickle.load(f)
+
 model = loaded_model["model"]
 scaler = loaded_model["scaler"]
 
