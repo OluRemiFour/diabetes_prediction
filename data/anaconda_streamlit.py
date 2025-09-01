@@ -2,17 +2,12 @@ import numpy as np
 import streamlit as st
 import pickle
 
-import os
-print(os.listdir("C:/Users/Dev/Desktop/py/data"))
-
 # loaded_model = pickle.load(open('trained_diabetes_model.sav', 'rb'))
 loaded_model = pickle.load(open('C:/Users/Dev/Desktop/py/data/trained_diabetes_model.sav', 'rb'))
 model = loaded_model["model"]
 scaler = loaded_model["scaler"]
 
 def diabetes_prediction(input_data):
-
-    # input_data = (9,165,88,0,0,30.4,0.302,49)  # 8 values, same order as dataset columns
 
     # Convert to numpy and reshape (1 row, 8 features)
     input_array = np.asarray(input_data).reshape(1, -1)
