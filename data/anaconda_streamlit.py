@@ -2,6 +2,9 @@ import numpy as np
 import streamlit as st
 import pickle
 
+import os
+print(os.listdir("C:/Users/Dev/Desktop/py/data"))
+
 # loaded_model = pickle.load(open('trained_diabetes_model.sav', 'rb'))
 loaded_model = pickle.load(open('C:/Users/Dev/Desktop/py/data/trained_diabetes_model.sav', 'rb'))
 model = loaded_model["model"]
