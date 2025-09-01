@@ -2,8 +2,8 @@ import numpy as np
 import streamlit as st
 import pickle
 
-# loaded_model = pickle.load(open('trained_diabetes_model.sav', 'rb'))
-loaded_model = pickle.load(open('C:/Users/Dev/Desktop/py/data/trained_diabetes_model.sav', 'rb'))
+loaded_model = pickle.load(open('data/trained_diabetes_model.sav', 'rb'))
+# loaded_model = pickle.load(open('C:/Users/Dev/Desktop/py/data/trained_diabetes_model.sav', 'rb'))
 model = loaded_model["model"]
 scaler = loaded_model["scaler"]
 
