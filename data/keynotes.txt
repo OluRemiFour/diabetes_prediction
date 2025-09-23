@@ -53,3 +53,14 @@
         b. Regression task - Linear Regression, Random Forest, Polynomial Regression etc.
         c. Clustering task - K-Means Clustering, Hierarchical Clustering  
 
+
+
+# Transfer Learning: is a deep learning technique where we us pre-trained model. This pre trained model is trained for one task and can be re-trained for smiliar task with smaller dataset 
+#      Transfer leraning gives higher acurracy compared to training model from scratch 
+
+
+# Example of Pre-Trained Models:
+#  VGG-16
+# ResNet50
+# Inceptionv3
+# MobileNet V2

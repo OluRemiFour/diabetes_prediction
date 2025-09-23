@@ -35,7 +35,7 @@ test_data_accuracy = accuracy_score(Y_test, test_pred)
 
 # Example patient data
 # input_data = (3,126,88,41,235,39.3,0.704,27)  # 8 values, same order as dataset columns
-input_data = (9,165,88,0,0,30.4,0.302,49)  # 8 values, same order as dataset columns
+input_data = (10,122,78,31,0,27.6,0.512,45)  # 8 values, same order as dataset columns
 
 # Convert to numpy and reshape (1 row, 8 features)
 input_array = np.asarray(input_data).reshape(1, -1)
